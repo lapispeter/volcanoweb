@@ -1,11 +1,21 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-researcher',
-  imports: [],
-  templateUrl: './researcher.component.html',
-  styleUrl: './researcher.component.css',
+@Injectable({
+  providedIn: 'root'
 })
-export class ResearcherComponent {
+export class ResearcherService {
+
+    private readonly http = inject(HttpClient);
+    private readonly url = 'http://localhost:8080/researchers';
+  
+  getResearchers() {
+    return this.http.get(this.url);
+  }
+
+  addResearcher(researcher: any) {
+    return this.http.post(this.url, researcher);
+  }
+
 
 }
