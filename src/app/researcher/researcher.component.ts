@@ -1,21 +1,10 @@
-import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { Component } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
-@Injectable({
-  providedIn: 'root'
+@Component({
+  selector: 'app-researcher',
+  imports: [ReactiveFormsModule],
+  templateUrl: './researcher.component.html',
+  styleUrl: './researcher.component.css',
 })
-export class ResearcherService {
-
-    private readonly http = inject(HttpClient);
-    private readonly url = 'http://localhost:8080/researchers';
-  
-  getResearchers() {
-    return this.http.get(this.url);
-  }
-
-  addResearcher(researcher: any) {
-    return this.http.post(this.url, researcher);
-  }
-
-
-}
+export class ResearcherComponent {}
