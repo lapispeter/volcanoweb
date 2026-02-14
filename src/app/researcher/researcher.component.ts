@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { ResearcherService } from '../shared/researcher.service';
 
 @Component({
   selector: 'app-researcher',
-  imports: [ReactiveFormsModule],
+  imports: [],
   templateUrl: './researcher.component.html',
   styleUrl: './researcher.component.css',
 })
