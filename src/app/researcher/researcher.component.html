@@ -1,3 +1,15 @@
+<!--
+/*
+* File: researcher.component.html
+* Author: Lapis Péter
+* Copyright: 2026, Lapis Péter
+* Group: SzoftII-E
+* Date: 2026-02-15
+* Github: https://github.com/lapispeter/
+* Licenc: MIT
+*/
+-->
+
 <h1>Kutatók</h1>
 
 <button class="btn btn-primary"
@@ -50,12 +62,33 @@
         (click)="closeModal()"></button>
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        
+        <form [formGroup]="researcherform" (ngSubmit)="save()"
+        id="researcherform">
+
+
+            <div class="mb-3">
+                <label for="full_name" class="col-form-label">Név:</label>
+                <input type="text" class="form-control" id="full_name" formControlName="full_name">
+            </div>
+            <div class="mb-3">
+                <label for="specialization" class="col-form-label">Kutatási terület:</label>
+                <input type="text" class="form-control" id="specialization" formControlName="specialization">
+            </div>
+
+
+
+        </form>
+
+
+
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary"
         (click)="closeModal()">Bezárás</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+
+        <button type="submit" class="btn btn-primary" form="researcherform">Mentés</button>
       </div>
     </div>
   </div>
