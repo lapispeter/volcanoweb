@@ -18,7 +18,8 @@ export class ResearcherComponent {
   getResearchers() {
     this.api.getResearchers().subscribe({
       next: (res:any) => {
-        this.researchers = res; 
+        this.researchers = res.data; 
+        console.log(res);
       },
       error: (err) => {
         console.log(err);

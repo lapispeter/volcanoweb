@@ -7,7 +7,7 @@ import { inject, Injectable } from '@angular/core';
 export class ResearcherService {
 
     private readonly http = inject(HttpClient);
-    private readonly url = 'http://localhost:8080/researchers';
+    private readonly url = 'http://localhost:8000/api/researchers';
   
   getResearchers() {
     return this.http.get(this.url);
