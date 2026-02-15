@@ -10,6 +10,8 @@ import { ResearcherService } from '../shared/researcher.service';
 export class ResearcherComponent {
   private readonly api= inject(ResearcherService);
   protected researchers:any;
+  showModal = false;
+  addMode=true;
 
   ngOnInit() {
     this.getResearchers();
@@ -25,5 +27,16 @@ export class ResearcherComponent {
         console.log(err);
       }
     });
+  }
+
+  startAddResearcher() {
+    console.log("test");
+    this.showModal = true;
+
+    
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 }
