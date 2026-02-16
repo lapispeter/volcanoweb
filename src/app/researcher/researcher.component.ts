@@ -25,7 +25,9 @@ export class ResearcherComponent {
   protected researchers:any;
   protected researcherform = this.builder.group({
     full_name: '',
-    specialization: ''
+    specialization: '',
+    affiliation: '',
+    experience_years:''
   });
 
   showModal = false;

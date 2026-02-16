@@ -22,6 +22,8 @@
             <th>Id</th>
             <th>Név</th>
             <th>Kutatási terület</th>
+            <th>Hovatartozás</th>
+            <th>Tapasztalati évek</th>
             
         </tr>
 
@@ -34,6 +36,8 @@
                 <td>{{researcher.id}}</td>
                 <td>{{researcher.full_name}}</td>
                 <td>{{researcher.specialization}}</td>
+                <td>{{researcher.affiliation}}</td>
+                <td>{{researcher.experience_years}}</td>
             </tr>
         }
 
@@ -74,6 +78,14 @@
             <div class="mb-3">
                 <label for="specialization" class="col-form-label">Kutatási terület:</label>
                 <input type="text" class="form-control" id="specialization" formControlName="specialization">
+            </div>
+            <div class="mb-3">
+                <label for="affiliation" class="col-form-label">Hovatartozás:</label>
+                <input type="text" class="form-control" id="affiliation" formControlName="affiliation">
+            </div>
+            <div class="mb-3">
+                <label for="experience_years" class="col-form-label">Tapasztalati évek:</label>
+                <input type="number" class="form-control" id="experience_years" formControlName="experience_years">
             </div>
 
 
